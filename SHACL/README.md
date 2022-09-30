@@ -5,7 +5,7 @@ This folder contains the two implementations of the legal reasoner based on SHAC
 
 <ul>
   <li>The subfolder <b>SHACL_files</b> contains the implementation that checks compliance of the legal rules on the files in the CORPUS.</li>
-  <li>The subfolder <b>SHACL_fuseki</b> contains the implementation that checks compliance of the legal rules on SPARQL endpoint opened in localhost via Apache Jena Fuseki.</li>
+  <li>The subfolder <b>SHACL_fuseki</b> contains the implementation that checks compliance of the legal rules on the SPARQL endpoint opened in localhost via Apache Jena Fuseki.</li>
 </ul>
 </p>
 
