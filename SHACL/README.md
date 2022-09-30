@@ -14,10 +14,17 @@ The legal rules are encoded within the file <i>regulativerules.ttl</i>. Both sub
 </p>
 
 <p align="justify">
-Specifically, the following two instructions run the Java files on Windows:
+Specifically, the following instruction runs the Java file in SHACL_files on Windows:
+</p>
 
-<ul>
-  <li>java -cp .;./lib/* -Dfile.encoding=utf-8 DetectViolationsOnCorpus "licenceusecaseTBox.owl" "riolOntology.owl" "regulativerules.ttl" "compliancerules.ttl" "../../CORPUS" "../../evaluationSHACLonfiles.txt"</li>
-  <li>java -cp .;./lib/* -Dfile.encoding=utf-8 fusekiSparqlEndpointClient "licenceusecaseTBox.owl" "riolOntology.owl" "regulativerules.ttl" "compliancerules.ttl" "dlv2sparqlABox_StateOfAffair_450-500_Probability50.owl" >> "../../evaluationSHACLonSparqlEndpoint.txt"</li>
-</ul>
+<p align="center">
+  java -cp .;./lib/* -Dfile.encoding=utf-8 DetectViolationsOnCorpus "licenceusecaseTBox.owl" "riolOntology.owl" "regulativerules.ttl" "compliancerules.ttl" "../../CORPUS" "../../evaluationSHACLonfiles.txt"
+</p>
+
+<p align="justify">
+While the following one runs the Java file in SHACL_fuseki on Windows. The files in CORPUS must be uploaded in Fuseki one by one; the instruction below refers to the file <i>dlv2sparqlABox_StateOfAffair_450-500_Probability50.owl</i>
+</p>
+
+<p align="center">
+  java -cp .;./lib/* -Dfile.encoding=utf-8 fusekiSparqlEndpointClient "licenceusecaseTBox.owl" "riolOntology.owl" "regulativerules.ttl" "compliancerules.ttl" "dlv2sparqlABox_StateOfAffair_450-500_Probability50.owl" >> "../../evaluationSHACLonSparqlEndpoint.txt"
 </p>
