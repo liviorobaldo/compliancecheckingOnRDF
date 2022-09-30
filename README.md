@@ -27,7 +27,7 @@ The use case includes the following four articles:
 The two implementations are available at the links below:
 
 <ul>
-  <li>Source code and instructions for the SHACL implementation are available <a href="https://github.com/liviorobaldo/compliancecheckers/tree/main/SHACL">at this link</a>.</li>
+  <li>Source code and instructions for the SHACL implementation are available <a href="https://github.com/liviorobaldo/compliancecheckingOnRDF/tree/main/SHACL">at this link</a>.</li>
   <li>Source code and instructions for the DLV v2 implementation are available at this link.</li>
 </ul>
 
