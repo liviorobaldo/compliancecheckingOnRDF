@@ -27,8 +27,8 @@ The use case includes the following four articles:
 The two implementations are available at the links below:
 
 <ul>
-  <li><a href="https://www.w3.org/TR/shacl-af/#rules">Shapes Constraint Language (SHACL)</a> rules. Source code and instructions are available <a href="https://github.com/liviorobaldo/compliancecheckers/tree/main/SHACL">here</a>.</li>
-  <li><a href="https://potassco.org/">Answer Set Programming (ASP)</a> rules via <a href="https://github.com/potassco/clingo/releases">Clingo v5.5.1</a> or <a href="https://www.dlvsystem.it/dlvsite/dlv/">DLV v2</a>. Source code and instructions are available <a href="https://github.com/liviorobaldo/compliancecheckers/tree/main/ASP">here</a>.</li>
+  <li>Source code and instructions for the SHACL implementation are available <a href="https://github.com/liviorobaldo/compliancecheckers/tree/main/SHACL">at this link</a>.</li>
+  <li>Source code and instructions for the DLV v2 implementation are available at this link.</li>
 </ul>
 
 </p>
