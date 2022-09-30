@@ -10,7 +10,7 @@ This folder contains the two implementations of the legal reasoner based on SHAC
 </p>
 
 <p align="justify">
-The legal rules are encoded within the file <i>regulativerules.ttl</i>. Both subfolders include a copy of this file. All other files in the subfolder are needed for the execution. In particular, the Java file in each subfolder is the one that must be executed in order to check compliance. The subfolder also include bat files to compile and run the Java file on Windows. The Java files output the results of the compliance checks, together with the execution time, in the files <i>evaluationSHACLonfiles.txt</i> and <i>evaluationSHACLonSparqlEndpoint.txt</i>.
+The legal rules are encoded within the file <i>regulativerules.ttl</i>. Both subfolders include a copy of this file. All other files in the subfolder are needed for the execution. In particular, the Java file in each subfolder is the one that must be executed in order to perform the compliance check. The subfolder also include bat files to compile and run the Java file on Windows. The Java files output the results of the compliance checks, together with the execution time, in the files <i>evaluationSHACLonfiles.txt</i> and <i>evaluationSHACLonSparqlEndpoint.txt</i>.
 </p>
 
 <p align="justify">
