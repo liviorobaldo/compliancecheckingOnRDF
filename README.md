@@ -9,7 +9,7 @@ Specifically, a selected use case of legal norms is formalized both in SHACL and
 </p>
 
 <p align="justify">
-The source code below includes <a href="https://www.java.com">Java</a> classes to execute the reasoners both when the states of affairs are stored within RDF files and when they are stored within a <a href="https://jena.apache.org/documentation/fuseki2">Apache Jena Fuseki</a> SPARQL endpoint. The Java classes detect the violations of the legal norms and store them within an output file, together with the execution time.
+The source code below includes <a href="https://www.java.com">Java</a> classes to execute the reasoners both when the states of affairs are stored within RDF files and when they are stored within a <a href="https://jena.apache.org/documentation/fuseki2">Apache Jena Fuseki</a> SPARQL endpoint. The Java classes detect the violations of the legal norms and store them within an output file, together with the measured execution time.
 </p>
 
 <p align="justify">
