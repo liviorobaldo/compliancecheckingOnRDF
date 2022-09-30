@@ -18,7 +18,7 @@ Specifically, the following instruction runs the Java file in SHACL_files on Win
 </p>
 
 <p align="center">
-  java -cp .;./lib/* -Dfile.encoding=utf-8 DetectViolationsOnCorpus "licenceusecaseTBox.owl" "riolOntology.owl" "regulativerules.ttl" "compliancerules.ttl" "../../CORPUS" "../../evaluationSHACLonfiles.txt"
+  <i>java -cp .;./lib/* -Dfile.encoding=utf-8 DetectViolationsOnCorpus "licenceusecaseTBox.owl" "riolOntology.owl" "regulativerules.ttl" "compliancerules.ttl" "../../CORPUS" "../../evaluationSHACLonfiles.txt"</i>
 </p>
 
 <p align="justify">
@@ -26,5 +26,5 @@ While the following one runs the Java file in SHACL_fuseki on Windows. The files
 </p>
 
 <p align="center">
-  java -cp .;./lib/* -Dfile.encoding=utf-8 fusekiSparqlEndpointClient "licenceusecaseTBox.owl" "riolOntology.owl" "regulativerules.ttl" "compliancerules.ttl" "dlv2sparqlABox_StateOfAffair_450-500_Probability50.owl" >> "../../evaluationSHACLonSparqlEndpoint.txt"
+  <i>java -cp .;./lib/* -Dfile.encoding=utf-8 fusekiSparqlEndpointClient "licenceusecaseTBox.owl" "riolOntology.owl" "regulativerules.ttl" "compliancerules.ttl" "dlv2sparqlABox_StateOfAffair_450-500_Probability50.owl" >> "../../evaluationSHACLonSparqlEndpoint.txt"</i>
 </p>
