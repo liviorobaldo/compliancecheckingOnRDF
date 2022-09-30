@@ -34,5 +34,9 @@ The two implementations are available at the links below:
 </p>
 
 <p align="justify">
-The implementations may be tested on the synthetic (ABox) datasets available on the folder CORPUS. Further corpora may be created via the dataset generator available <a href="https://github.com/liviorobaldo/compliancecheckers/tree/main/DatasetGenerator">at this link</a>.
+The implementations may be tested on the synthetic (ABox) datasets available in the subfolder CORPUS. Further corpora may be created via the dataset generator available <a href="https://github.com/liviorobaldo/compliancecheckers/tree/main/DatasetGenerator">at this link</a>.
+</p>
+
+<p align="justify">
+The fuseki server, configured to upload the files in CORPUS and make them available as a SPARQL endpoint on localhost, is available in the subfolder FUSEKI.
 </p>
