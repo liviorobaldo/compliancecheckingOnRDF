@@ -14,5 +14,10 @@ The legal rules are encoded within the file <i>regulativerules.ttl</i>. Both sub
 </p>
 
 <p align="justify">
-The implementations can be tested on the synthetic (Abox) datasets created via the dataset generator <a href="https://github.com/liviorobaldo/compliancecheckers/tree/main/DatasetGenerator">at this link</a>.
+Specifically, the following two instructions run the Java files on Windows:
+
+<ul>
+  <li>java -cp .;./lib/* -Dfile.encoding=utf-8 DetectViolationsOnCorpus "licenceusecaseTBox.owl" "riolOntology.owl" "regulativerules.ttl" "compliancerules.ttl" "../../CORPUS" "../../evaluationSHACLonfiles.txt"</li>
+  <li>java -cp .;./lib/* -Dfile.encoding=utf-8 fusekiSparqlEndpointClient "licenceusecaseTBox.owl" "riolOntology.owl" "regulativerules.ttl" "compliancerules.ttl" "dlv2sparqlABox_StateOfAffair_450-500_Probability50.owl" >> "../../evaluationSHACLonSparqlEndpoint.txt"</li>
+</ul>
 </p>
