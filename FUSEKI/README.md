@@ -1,34 +1,17 @@
-# Legal reasoners
+# Installing and executing Apache Jena Fuseki server.
 
 <p align="justify">
-This GitHub repository contains implementations of a selected use case of legal norms in different automatic reasoners.
+Download the latest version of Apache Jena Fuseki server from <a href="https://jena.apache.org/download/index.cgi">this link</a>. The experiments described in this repository have been executed with Apache Jena Fuseki v4.6.1.
 </p>
 
 <p align="justify">
-The use case includes the following four articles:
-
-<ul>
-  <li><b>Article 1</b>. The Licensor grants the Licensee a licence to evaluate the Product.</li>
-  <li><b>Article 2</b>. The Licensee must not publish the results of the evaluation of the Product without the approval of the Licensor. If the Licensee publishes results of the evaluation of the Product without approval from the Licensor, the material must be removed.</li>
-  <li><b>Article 3</b>. The Licensee must not publish comments about the evaluation of the Product, unless the Licensee is permitted to publish the results of the evaluation.</li>
-  <li><b>Article 4</b>. If the Licensee is commissioned to perform an independent evaluation of the Product, then the Licensee has the obligation to publish the evaluation results.</li>
-</ul>
+After that, you must upload a <i>single</i> file in the CORPUS on Apache Jena Fuseki and make it available at the SPARQL endpoint "ABox". Therefore, to run the experiments you must upload the files one by one.
 </p>
 
 <p align="justify">
-The norms in the use case has been implemented as:
-
-<ul>
-  <li><a href="https://www.w3.org/TR/shacl-af/#rules">Shapes Constraint Language (SHACL)</a> rules. Source code and instructions are available <a href="https://github.com/liviorobaldo/compliancecheckers/tree/main/SHACL">here</a>.</li>
-  <li><a href="https://potassco.org/">Answer Set Programming (ASP)</a> rules via <a href="https://github.com/potassco/clingo/releases">Clingo v5.5.1</a> or <a href="https://www.dlvsystem.it/dlvsite/dlv/">DLV v2</a>. Source code and instructions are available <a href="https://github.com/liviorobaldo/compliancecheckers/tree/main/ASP">here</a>.</li>
-  <li><a href="https://dl.acm.org/doi/10.1145/1149114.1149117">DLV system</a> rules. Source code and instructions are available <a href="https://github.com/liviorobaldo/compliancecheckers/tree/main/DLV">here</a>.</li>
-  <li><a href="https://link.springer.com/chapter/10.1007/978-3-642-25655-4_14">PROLEG</a> rules. Source code and instructions are available <a href="https://github.com/liviorobaldo/compliancecheckers/tree/main/PROLEG">here</a>.</li>
-  <li><a href="https://apice.unibo.it/xwiki/bin/view/Arg2p/WebHome">Arg2P</a> rules. Source code and instructions are available <a href="https://github.com/liviorobaldo/compliancecheckers/tree/main/Arg2P">here</a>.</li>
-  <li><a href="http://spindle.data61.csiro.au/">SPINdle</a> rules. Source code and instructions are available <a href="https://github.com/liviorobaldo/compliancecheckers/tree/main/SPINdle">here</a>.</li>
-</ul>
-
+The file runFuseki.bat contains the instructions to do so on Windows. For instance:
 </p>
 
-<p align="justify">
-The implementations can be tested on the synthetic (Abox) datasets created via the dataset generator <a href="https://github.com/liviorobaldo/compliancecheckers/tree/main/DatasetGenerator">at this link</a>.
+<p align="center">
+java -Xmx1200M -jar fuseki-server.jar --file ../../CORPUS/dlv2sparqlABox_StateOfAffair_450-500_Probability50.owl /ABox
 </p>
