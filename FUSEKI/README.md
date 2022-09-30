@@ -1,4 +1,4 @@
-# Installing and executing Apache Jena Fuseki server.
+# Installing and executing Apache Jena Fuseki server
 
 <p align="justify">
 Download the latest version of Apache Jena Fuseki server from <a href="https://jena.apache.org/download/index.cgi">this link</a>. The experiments described in this repository have been executed with Apache Jena Fuseki v4.6.1.
