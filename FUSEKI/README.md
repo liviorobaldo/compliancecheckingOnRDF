@@ -9,7 +9,7 @@ After that, you must upload a <i>single</i> file in the CORPUS on Apache Jena Fu
 </p>
 
 <p align="justify">
-The file runFuseki.bat contains the instructions to do so on Windows. For instance:
+The file runFuseki.bat contains instructions to do so on Windows. For instance:
 </p>
 
 <p align="center">
