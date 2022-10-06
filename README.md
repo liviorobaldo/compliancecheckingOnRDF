@@ -9,7 +9,7 @@ Specifically, a selected use case of legal norms is formalized both in SHACL and
 </p>
 
 <p align="justify">
-The source code below includes <a href="https://www.java.com">Java</a> classes to execute the reasoners both when the states of affairs are stored within RDF files and when they are stored within a <a href="https://jena.apache.org/documentation/fuseki2">Apache Jena Fuseki</a> SPARQL endpoint. The Java classes detect the violations of the legal norms and store them within an output file, together with the measured execution time.
+This GitHub repository includes source code and instructions to execute the reasoners both when the states of affairs are stored within RDF files and when they are stored within a <a href="https://jena.apache.org/documentation/fuseki2">Apache Jena Fuseki</a> SPARQL endpoint. The implementations detect the violations of the legal norms and store them within an output file, together with the measured execution time.
 </p>
 
 <p align="justify">
@@ -34,7 +34,7 @@ The two implementations are available at the links below:
 </p>
 
 <p align="justify">
-The implementations may be tested on the synthetic (ABox) datasets available in the subfolder CORPUS. Further corpora may be created via the dataset generator available <a href="https://github.com/liviorobaldo/compliancecheckers/tree/main/DatasetGenerator">at this link</a>.
+The implementations have been tested on the synthetic (ABox) datasets available in the subfolder CORPUS. Further corpora may be created via the dataset generator available <a href="https://github.com/liviorobaldo/compliancecheckers/tree/main/DatasetGenerator">at this link</a>.
 </p>
 
 <p align="justify">
