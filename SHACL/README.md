@@ -22,7 +22,7 @@ The legal rules are encoded within the file <i>regulativerules.ttl</i>. Both sub
 </p>
 
 <p align="justify">
-While the following instruction runs the Java file <i>fusekiSparqlEndpointClient.class</i> in SHACL_fuseki on Windows. The files in CORPUS must be uploaded in Fuseki one by one; the instruction below refers to the file <i>rdfABox_Size50_Probability50.owl</i>
+While the following instruction runs the Java file <i>fusekiSparqlEndpointClient.class</i> in SHACL_fuseki on Windows. The files in CORPUS must be uploaded in Fuseki one by one; the instruction below refers to the file <i>rdfABox_Size100_Probability50.rdf</i>
 </p>
 
 <p align="center">
