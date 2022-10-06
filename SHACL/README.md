@@ -22,9 +22,9 @@ The legal rules are encoded within the file <i>regulativerules.ttl</i>. Both sub
 </p>
 
 <p align="justify">
-While the following instruction runs the Java file <i>fusekiSparqlEndpointClient.class</i> in SHACL_fuseki on Windows. The files in CORPUS must be uploaded in Fuseki one by one; the instruction below refers to the file <i>dlv2sparqlABox_StateOfAffair_450-500_Probability50.owl</i>
+While the following instruction runs the Java file <i>fusekiSparqlEndpointClient.class</i> in SHACL_fuseki on Windows. The files in CORPUS must be uploaded in Fuseki one by one; the instruction below refers to the file <i>rdfABox_Size50_Probability50.owl</i>
 </p>
 
 <p align="center">
-  <i>java -cp .;./lib/* -Dfile.encoding=utf-8 fusekiSparqlEndpointClient "licenceusecaseTBox.owl" "riolOntology.owl" "regulativerules.ttl" "compliancerules.ttl" "dlv2sparqlABox_StateOfAffair_450-500_Probability50.owl" >> "../../evaluationSHACLonSparqlEndpoint.txt"</i>
+  <i>java -cp .;./lib/* -Dfile.encoding=utf-8 fusekiSparqlEndpointClient "licenceusecaseTBox.owl" "riolOntology.owl" "regulativerules.ttl" "compliancerules.ttl" "rdfABox_Size50_Probability50.owl" >> "../../evaluationSHACLonSparqlEndpoint.txt"</i>
 </p>
