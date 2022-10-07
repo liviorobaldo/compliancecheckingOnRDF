@@ -1,7 +1,7 @@
 # Compliance checking on RDF data
 
 <p align="justify">
-This GitHub repository contains source code to compare two legal reasoners on <a href="https://www.w3.org/RDF">Resource Description Framework (RDF)</a> data. The first legal reasoner is based on the <a href="https://www.w3.org/TR/shacl-af/#rules">Shapes Constraint Language (SHACL)</a>, the second one is based on the <a href="https://www.dlvsystem.it/dlvsite/dlv/">DLV v2</a> automated reasoner for <a href="https://www.cambridge.org/core/journals/theory-and-practice-of-logic-programming/article/abs/aspcore2-input-language-format/292E52334010C1F62E4469ABCD66228E">ASP-Core-2</a>.
+This GitHub repository contains source code to compare two legal reasoners on <a href="https://www.w3.org/RDF">Resource Description Framework (RDF)</a> data. The first legal reasoner is based on the <a href="https://www.w3.org/TR/shacl-af/#rules">Shapes Constraint Language (SHACL)</a>, the second one is based on the <a href="https://dlv.demacs.unical.it/">DLV v2</a> automated reasoner for <a href="https://www.cambridge.org/core/journals/theory-and-practice-of-logic-programming/article/abs/aspcore2-input-language-format/292E52334010C1F62E4469ABCD66228E">ASP-Core-2</a>.
 </p>
 
 <p align="justify">
@@ -28,7 +28,7 @@ The two implementations are available at the links below:
 
 <ul>
   <li>Source code and instructions for the SHACL implementation are available <a href="https://github.com/liviorobaldo/compliancecheckingOnRDF/tree/main/SHACL">at this link</a>.</li>
-  <li>Source code and instructions for the DLV v2 implementation are available at this link.</li>
+  <li>Executables and instructions for the DLV v2 implementation are available at this link.</li>
 </ul>
 
 </p>
