@@ -45,7 +45,7 @@ The fuseki server, configured to upload the files in CORPUS and make them availa
 ## How to run the experiments
 Experiments have been executed on a Linux machine running Ubuntu 22.04.1 LTS equipped with <i>Intel® Core™ i7-9750H</i> CPU and <i>32GB</i> of RAM.
 
-Experiments can be also replicated using Ubuntu Bash on a Windows machine. The Ubuntu bash can be downloaded by the Windows Store <a href="https://apps.microsoft.com/store/detail/ubuntu-22041-lts/9PN20MSR04DW">at this link.</a>
+Experiments can be also replicated using Ubuntu Bash on a Windows machine or a standard terminal on MacOS. The Ubuntu Bash for Windows can be downloaded from the Windows Store <a href="https://apps.microsoft.com/store/detail/ubuntu-22041-lts/9PN20MSR04DW">at this link.</a>
 
 In order to run all the experiments the following steps must be performed
 <ol>
@@ -53,7 +53,7 @@ In order to run all the experiments the following steps must be performed
 <li>Move inside the experiments <i>root</i> experiments folder</br>
 <ul>
   <li>On Linux: <code>cd path/to/compliancecheckingOnRDF</code></li>
-  <li>On Windows (if the folder is located on your <b>Desktop</b> folder): <code>cd /mnt/c/Users/&lt;YOUR_WINDOWS_USERNAME&gt;/Desktop/compliancecheckingOnRDF</code></li>
+  <li>On Windows (if the folder is located on your <b>Desktop</b>): <code>cd /mnt/c/Users/&lt;YOUR_WINDOWS_USERNAME&gt;/Desktop/compliancecheckingOnRDF</code></li>
   
 </ul>
 <li>Run the experiments executing the following commands one by one</li>
@@ -63,4 +63,13 @@ In order to run all the experiments the following steps must be performed
   <li><code>sh runLocal_DLV2_SHACL.sh dlv2 2>/dev/null</code></li>
   <li><code>sh runLocal_DLV2_SHACL.sh shacl 2>/dev/null</code></li>
 </ul>
+<li><b>ALTERNATIVELY</b>, all the experiments can be executed running the following way
+<ul>
+  <li>To print the results on <code>stdout</code> execute
+  <pre><code>sh runAll.sh</code></li></pre>
+  <li>To print the results on a <code>csv</code> file called <code>results_all.csv</code> execute
+  <pre><code>sh runAll.sh > results_all.csv</code></li></pre>
+</ul>
+</li>
+
 </ol>
