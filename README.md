@@ -50,6 +50,11 @@ Experiments can be also replicated using Ubuntu Bash on a Windows machine or a s
 In order to run all the experiments the following steps must be performed
 <ol>
 <li>Open a terminal or the Ubuntu Bash</li>
+<ul>
+  <li>Install the <code>Java JDK</code> and the <code>Java JRE</code>
+  <pre><code>sudo apt update</br>sudo apt install default-jdk</br>sudo apt install default-jre</code></pre></li>
+  
+
 <li>Move inside the experiments <i>root</i> experiments folder</br>
 <ul>
   <li>On Linux: <code>cd path/to/compliancecheckingOnRDF</code></li>
