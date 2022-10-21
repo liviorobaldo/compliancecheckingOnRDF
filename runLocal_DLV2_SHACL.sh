@@ -36,6 +36,17 @@ if [ -z "$2" ]; then
     RED=''
     GREEN=''
     NC=''
+elif [ "$2" = "csv" ]; then
+    DEBUG=2
+    RED=''
+    GREEN=''
+    NC=''
+elif [ "$2" = "first" ]; then
+    DEBUG=3
+    RED=''
+    GREEN=''
+    NC=''
+    echo "OK " $DEBUG
 fi
 
 RESULT_FILE="results_$1_local.txt"
@@ -45,7 +56,11 @@ rm $RESULT_FILE
 
 
 total_time=0
-echo "Instance,Type,Time"
+
+if [ $DEBUG -ne 2 ]; then
+    echo "Instance,Reasoner,Type,Time"
+fi
+
 for F in $files; do
 
     cd $ROOT_PATH
@@ -66,10 +81,12 @@ for F in $files; do
     if [ $DEBUG -eq 1 ]; then
         >&2 echo "Execution Time: END:" $end " START " $start " CURRENT: " $current_time
     fi
-    echo "${RED}$F,local,${GREEN}$current_time${NC}"
+    echo "${RED}$F,$1,local,${GREEN}$current_time${NC}"
 
     cd $ROOT_PATH
 
 done
 
-echo 'Total Time:' $total_time
+if [ $DEBUG -lt 2 ]; then
+    echo 'Total Time:' $total_time
+fi

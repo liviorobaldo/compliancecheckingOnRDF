@@ -7,7 +7,7 @@ DLV2_PATH="DLV2"
 SHACL_PATH="SHACL/SHACL_fuseki"
 EXE_PATH=$DLV2_PATH
 CORPUS_PATH="CORPUS"
-CMD="/usr/bin/time -v ./dlv2 ./dlv2SparqlABoxEndpoint.asp ./rules.asp" 
+CMD="/usr/bin/time -v ./dlv2 ./dlv2SparqlABoxEndpoint.asp ./rules_remote.asp" 
 DEBUG=1
 
 RED='\033[0;31m'
@@ -26,7 +26,7 @@ elif [ $1 = "shacl" ]; then
     cd $ROOT_PATH
     CMD="/usr/bin/time -v java -cp .:./lib/* -Dfile.encoding=utf-8 fusekiSparqlEndpointClient licenceusecaseTBox.owl riolOntology.owl regulativerules.ttl compliancerules.ttl"
 elif [ $1 = "dlv2" ]; then
-    CMD="/usr/bin/time -v ./dlv2 ./dlv2SparqlABoxEndpoint.asp ./rules.asp"
+    CMD="/usr/bin/time -v ./dlv2 ./dlv2SparqlABoxEndpoint.asp ./rules_remote.asp"
 else
     echo "Argument not valid"
     exit 1
@@ -34,6 +34,16 @@ fi
 
 if [ -z "$2" ]; then
     DEBUG=0
+    RED=''
+    GREEN=''
+    NC=''
+elif [ "$2" = "csv" ]; then
+    DEBUG=2
+    RED=''
+    GREEN=''
+    NC=''
+elif [ "$2" = "first" ]; then
+    DEBUG=3
     RED=''
     GREEN=''
     NC=''
@@ -48,7 +58,10 @@ rm $RESULT_FILE
 
 
 total_time=0
-echo "Instance,Type,Time"
+if [ $DEBUG -ne 2 ]; then
+    echo "Instance,Reasoner,Type,Time"
+fi
+
 for F in $files; do
 
     if [ $DEBUG -eq 1 ]; then
@@ -85,7 +98,7 @@ for F in $files; do
     if [ $DEBUG -eq 1 ]; then
         >&2 echo "Execution Time: END:" $end " START " $start " CURRENT: " $current_time
     fi
-    echo "${RED}$F,remote,${GREEN}$current_time${NC}"
+    echo "${RED}$F,$1,remote,${GREEN}$current_time${NC}"
 
     # KILL FUSEKI SERVER AND ITERATE OVER ALL THE OTHER CORPUS FILES
     while kill -0 $server_pid 2> /dev/null; do
@@ -97,4 +110,6 @@ for F in $files; do
     #sleep 1
 done
 
-echo 'Total Time:' $total_time
+if [ $DEBUG -lt 2 ]; then
+    echo 'Total Time:' $total_time
+fi
