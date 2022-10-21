@@ -97,4 +97,4 @@ for F in $files; do
     #sleep 1
 done
 
-    echo 'Total Time:' $total_time
+echo 'Total Time:' $total_time

@@ -9,9 +9,8 @@ After that, you must upload a <i>single</i> file in the CORPUS on Apache Jena Fu
 </p>
 
 <p align="justify">
-The file runFuseki.bat contains instructions to do so on Windows. For instance:
+Fuseki server can be executed in a terminal (or in the Ubuntu Bash for Windows) with the following command:
 </p>
 
-<p align="center">
-java -Xmx1200M -jar fuseki-server.jar --file ../../CORPUS/dlv2sparqlABox_StateOfAffair_450-500_Probability50.owl /ABox
-</p>
+<pre><code>java -Xmx1200M -jar fuseki-server.jar --file ../../CORPUS/rdfABox_Size500_Probability50.ttl /ABox
+</code></pre>

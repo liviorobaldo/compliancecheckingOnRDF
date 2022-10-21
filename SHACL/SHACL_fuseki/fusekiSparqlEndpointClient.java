@@ -100,7 +100,7 @@ public class fusekiSparqlEndpointClient
 
         System.out.println("------------------------------------------------------------------------------------------------------------------------------------------------");
         System.out.println(violations.size()+" violations found for dataset "+datasetName);
-        System.out.println("TIME: "+time+"s");
+//        System.out.println("INTERNAL_TIME (not real): "+time+"s");
         for(Resource v:violations)
         {
             System.out.println();

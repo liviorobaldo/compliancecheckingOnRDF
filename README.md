@@ -1,7 +1,7 @@
 # Compliance checking on RDF data
 
 <p align="justify">
-This GitHub repository contains source code to compare two legal reasoners on <a href="https://www.w3.org/RDF">Resource Description Framework (RDF)</a> data. The first legal reasoner is based on the <a href="https://www.w3.org/TR/shacl-af/#rules">Shapes Constraint Language (SHACL)</a>, the second one is based on the <a href="https://dlv.demacs.unical.it/">DLV v2</a> automated reasoner for <a href="https://www.cambridge.org/core/journals/theory-and-practice-of-logic-programming/article/abs/aspcore2-input-language-format/292E52334010C1F62E4469ABCD66228E">ASP-Core-2</a>.
+This GitHub repository contains source code to compare two legal reasoners on <a href="https://www.w3.org/RDF">Resource Description Framework (RDF)</a> data. The first legal reasoner is based on the <a href="https://www.w3.org/TR/shacl-af/#rules">Shapes Constraint Language (SHACL)</a>, the second one is based on the <a href="https://dlv.demacs.unical.it/">DLV2</a> automated reasoner for <a href="https://www.cambridge.org/core/journals/theory-and-practice-of-logic-programming/article/abs/aspcore2-input-language-format/292E52334010C1F62E4469ABCD66228E">ASP-Core-2</a>.
 </p>
 
 <p align="justify">
@@ -28,7 +28,7 @@ The two implementations are available at the links below:
 
 <ul>
   <li>Source code and instructions for the SHACL implementation are available <a href="https://github.com/liviorobaldo/compliancecheckingOnRDF/tree/main/SHACL">at this link</a>.</li>
-  <li>Executables and instructions for the DLV v2 implementation are available at this link.</li>
+  <li>Executables and instructions for the DLV2 implementation are available <a href="https://github.com/liviorobaldo/compliancecheckingOnRDF/tree/main/DLV2">at this link</a>.</li>
 </ul>
 
 </p>
@@ -40,3 +40,27 @@ The implementations have been tested on the synthetic (ABox) datasets available 
 <p align="justify">
 The fuseki server, configured to upload the files in CORPUS and make them available as a SPARQL endpoint on localhost, is available in the subfolder FUSEKI.
 </p>
+
+
+## How to run the experiments
+Experiments have been executed on a Linux machine running Ubuntu 22.04.1 LTS equipped with <i>Intel® Core™ i7-9750H</i> CPU and <i>32GB</i> of RAM.
+
+Experiments can be also replicated using Ubuntu Bash on a Windows machine. The Ubuntu bash can be downloaded by the Windows Store <a href="https://apps.microsoft.com/store/detail/ubuntu-22041-lts/9PN20MSR04DW">at this link.</a>
+
+In order to run all the experiments the following steps must be performed
+<ol>
+<li>Open a terminal or the Ubuntu Bash</li>
+<li>Move inside the experiments <i>root</i> experiments folder</br>
+<ul>
+  <li>On Linux: <code>cd path/to/compliancecheckingOnRDF</code></li>
+  <li>On Windows (if the folder is located on your <b>Desktop</b> folder): <code>cd /mnt/c/Users/&lt;YOUR_WINDOWS_USERNAME&gt;/Desktop/compliancecheckingOnRDF</code></li>
+  
+</ul>
+<li>Run the experiments executing the following commands one by one</li>
+<ul>
+  <li><code>sh runFuseki_DLV2_SHACL.sh dlv2 2>/dev/null</code></li>
+  <li><code>sh runFuseki_DLV2_SHACL.sh shacl 2>/dev/null</code></li>
+  <li><code>sh runLocal_DLV2_SHACL.sh dlv2 2>/dev/null</code></li>
+  <li><code>sh runLocal_DLV2_SHACL.sh shacl 2>/dev/null</code></li>
+</ul>
+</ol>
