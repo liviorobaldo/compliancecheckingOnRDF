@@ -1,6 +1,13 @@
 #!/bin/bash
 
 
+NESTAT="netstat -tupan"
+if uname -a | grep -i 'microsoft' >/dev/null; then
+    if ! uname -a | grep -i 'WSL2' >/dev/null; then
+        NETSTAT="netstat.exe -an"
+    fi
+fi
+
 ROOT_PATH=$(pwd)
 FUSEKI_PATH="FUSEKI/fuseki"
 DLV2_PATH="DLV2"
@@ -76,10 +83,10 @@ for F in $files; do
     cd $EXE_PATH
 
     # WAIT UNTIL THE FUSEKI SERVER IS LISTENING ON ITS DEFAULT PORT (PORT 3030)
-    server_started=$(netstat -tupan 2> /dev/null | grep 3030 | grep "LISTEN" | wc -l)
+    server_started=$($NETSTAT 2> /dev/null | grep 3030 | grep "LISTEN" | wc -l)
     while [ $server_started -lt 1 ]
     do
-        server_started=$(netstat -tupan 2> /dev/null | grep 3030 | grep "LISTEN" | wc -l)
+        server_started=$($NETSTAT 2> /dev/null | grep 3030 | grep "LISTEN" | wc -l)
     done
 
     if [ $1 = "shacl" ]; then
