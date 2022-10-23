@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-NESTAT="netstat -tupan"
+NETSTAT="netstat -tupan"
 if uname -a | grep -i 'microsoft' >/dev/null; then
     if ! uname -a | grep -i 'WSL2' >/dev/null; then
         NETSTAT="netstat.exe -an"
@@ -83,10 +83,10 @@ for F in $files; do
     cd $EXE_PATH
 
     # WAIT UNTIL THE FUSEKI SERVER IS LISTENING ON ITS DEFAULT PORT (PORT 3030)
-    server_started=$($NETSTAT 2> /dev/null | grep 3030 | grep "LISTEN" | wc -l)
+    server_started=`$NETSTAT 2> /dev/null | grep 3030 | grep "LISTEN" | wc -l`
     while [ $server_started -lt 1 ]
     do
-        server_started=$($NETSTAT 2> /dev/null | grep 3030 | grep "LISTEN" | wc -l)
+        server_started=`$NETSTAT 2> /dev/null | grep 3030 | grep "LISTEN" | wc -l`
     done
 
     if [ $1 = "shacl" ]; then
@@ -108,9 +108,16 @@ for F in $files; do
     echo "${RED}$F,$1,remote,${GREEN}$current_time${NC}"
 
     # KILL FUSEKI SERVER AND ITERATE OVER ALL THE OTHER CORPUS FILES
-    while kill -0 $server_pid 2> /dev/null; do
-        kill $server_pid 2> /dev/null
+    kill $server_pid
+    server_started=`$NETSTAT 2> /dev/null | grep 3030 | grep "LISTEN" | wc -l`
+    while [ $server_started -ge 1 ]
+    do
+        server_started=`$NETSTAT 2> /dev/null | grep 3030 | grep "LISTEN" | wc -l`
     done
+
+    #while kill -0 $server_pid 2> /dev/null; do
+    #    kill $server_pid 2> /dev/null
+    #done
 
     #kill $server_pid
     cd $ROOT_PATH
