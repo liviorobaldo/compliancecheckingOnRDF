@@ -5,8 +5,6 @@ import org.apache.jena.rdf.model.*;
 import org.apache.jena.util.FileUtils;
 import org.apache.jena.ontology.*;
 
-    //INTERESSANTE!!! QUESTI SONO DI TopBraid, NON DI JENA!
-    //Ho provato ad usare quelle di Jena, ma non sono riuscito, sollevavano un vespaio di eccezioni...
 import org.topbraid.jenax.util.JenaUtil;
 import org.topbraid.shacl.rules.RuleUtil;
 
@@ -14,7 +12,6 @@ import org.topbraid.shacl.util.ModelPrinter;
 
 public class DetectViolationsOnCorpus 
 {
-        //RICORDA SEMPRE: SHACL È SOLO PER VALIDARE RDF, NON OWL!!! SHACL è UN'ESTENSIONE DI RDF, NON DI OWL!!!
     public static void main(String[] args) throws Exception 
     {
         // DEFAULT VALUES
