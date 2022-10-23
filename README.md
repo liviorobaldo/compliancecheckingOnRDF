@@ -55,6 +55,8 @@ In order to run all the experiments the following steps must be performed
   <pre><code>sudo apt update</br>
 sudo apt install default-jdk</br>
 sudo apt install default-jre</code></pre>
+  <li>Install the <code>rdflib</code> and the <code>SPARQLWrapper</code> Python3 modules necessary to run <code>DLV2</code> with SPARQL support</li>
+  <pre><code>sudo pip3 install rdflib SPARQLWrapper</code></pre>
   
 
 <li>Move inside the experiments <i>root</i> experiments folder</br>
