@@ -8,16 +8,11 @@ import org.apache.jena.ontology.*;
 import org.apache.jena.rdfconnection.*;
 import org.apache.jena.query.*;
 
-/**/
-    //INTERESSANTE!!! QUESTI SONO DI TopBraid, NON DI JENA!
-    //Ho provato ad usare quelle di Jena, ma non sono riuscito, sollevavano un vespaio di eccezioni...
 import org.topbraid.jenax.util.JenaUtil;
 import org.topbraid.shacl.rules.RuleUtil;
-/**/
 
 public class fusekiSparqlEndpointClient 
 {
-        //RICORDA SEMPRE: SHACL È SOLO PER VALIDARE RDF, NON OWL!!! SHACL è UN'ESTENSIONE DI RDF, NON DI OWL!!!
     public static void main(String[] args) throws Exception 
     {
             //Loading the TBox and the rules, as in the corpus-based version.
