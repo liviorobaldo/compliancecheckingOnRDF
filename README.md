@@ -72,7 +72,7 @@ sudo apt install default-jre</code></pre>
   <li><code>sh runLocal_DLV2_SHACL.sh dlv2 2>/dev/null</code></li>
   <li><code>sh runLocal_DLV2_SHACL.sh shacl 2>/dev/null</code></li>
 </ul>
-<li><b>ALTERNATIVELY</b>, all the experiments can be executed running the following way
+<li><b>ALTERNATIVELY</b>, all the experiments can be executed running the following command
 <ul>
   <li>To print the results on <code>stdout</code> execute
   <pre><code>sh runAll.sh</code></li></pre>
