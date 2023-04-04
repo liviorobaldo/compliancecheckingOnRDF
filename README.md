@@ -59,7 +59,7 @@ sudo apt install default-jre</code></pre>
   <pre><code>sudo pip3 install rdflib SPARQLWrapper</code></pre>
   
 
-<li>Move inside the experiments <i>root</i> experiments folder</br>
+<li>Move inside the experiments <i>root</i> folder</br>
 <ul>
   <li>On Linux: <code>cd path/to/compliancecheckingOnRDF</code></li>
   <li>On Windows (if the folder is located on your <b>Desktop</b>): <code>cd /mnt/c/Users/&lt;YOUR_WINDOWS_USERNAME&gt;/Desktop/compliancecheckingOnRDF</code></li>
